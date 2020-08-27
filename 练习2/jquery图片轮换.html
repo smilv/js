@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/focusimgs.css" rel="stylesheet" />
+    <script src="Js/jquery-1.7.1.js"></script>
+</head>
+<body>
+    <div id="slideshow">
+        <ul>
+            <li id="lambo1"><a href="http://www.aaa.com/photos/vodcars/4207529693/lightbox/">
+                <img src="images/lambo1.jpg" alt="Green Lamborghini" /></a></li>
+            <li id="lambo2"><a href="http://www.aaa.com/photos/inno68/5076809499/lightbox/">
+                <img src="images/lambo2.jpg" alt="White Lamborghini" /></a></li>
+            <li id="lambo3"><a href="http://www.aaa.com/photos/chriswevers/5121055362/lightbox/">
+                <img src="images/lambo3.jpg" alt="Grey Lamborghini" /></a></li>
+            <li id="lambo4"><a href="http://www.aaa.com/photos/damianmorysfotos/4388501292/lightbox/">
+                <img src="images/lambo4.jpg" alt="Green Lamborghini" /></a></li>
+            <li id="lambo5"><a href="http://www.aaa.com/photos/exoticcarlife/5299365670/lightbox/">
+                <img src="images/lambo5.jpg" alt="Yellow Lamborghini" /></a></li>
+
+            <li id="lambo1"><a href="http://www.aaa.com/photos/vodcars/4207529693/lightbox/">
+                <img src="images/lambo1.jpg" alt="Green Lamborghini" /></a></li>
+        </ul>
+    </div>
+    <div id="slideshow-nav">
+        <ul>
+            <li><a href="#lambo1" class="active">See the green Lamborghini</a></li>
+            <li><a href="#lambo2">See the white Lamborghini</a></li>
+            <li><a href="#lambo3">See the grey Lamborghini</a></li>
+            <li><a href="#lambo4">See the green Lamborghini</a></li>
+            <li><a href="#lambo5">See the yellow Lamborghini</a></li>
+        </ul>
+    </div>
+    <script>
+        $("#slideshow-nav li").each(function (index) {   //鼠标点击切换图片
+            $(this).click(function () {
+                $(this).parent().find("a").removeClass("active");
+                $(this).find("a").addClass("active");
+                $("#slideshow").animate({ scrollLeft: 918 * index }, 1000);
+
+                return false;  //防止a链接跳转
+            });
+        })
+        var t;
+        function scrollLoop(){
+            var index = 1;    //无缝滚动
+             t = setInterval(function () {
+                $("#slideshow").animate({ scrollLeft: 918 * index }, 1000, function () {
+                    if (index == 6) {
+                        index = 1;
+                        $("#slideshow").scrollLeft(0);
+                    }
+                });
+
+                $("#slideshow-nav li a").removeClass("active");
+                $("#slideshow-nav li:eq(" + index % 5 + ") a").addClass("active");
+                index++;
+
+            }, 2000)
+        }
+        scrollLoop();
+
+
+
+        $("#slideshow li").each(function () {    //划过停止  离开继续
+            $(this).mouseover(function () {
+                clearInterval(t);
+            }).mouseleave(function () {
+                scrollLoop();
+            })
+
+        })
+
+    </script>
+</body>
+</html>

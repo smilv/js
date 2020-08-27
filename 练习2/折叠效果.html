@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        #menu {width:200px;overflow:hidden;border:solid 3px #000;margin-top:30px;margin-left:30px;
+                font-size:12px;}
+        #menu h1 {font-size:14px;height:30px;text-align:center;line-height:30px;background:#000066;color:#FFF;
+                   cursor:pointer;border-bottom:solid 1px #000;}
+        #menu ul {display:none;}
+        #menu ul.show {display:block;}
+        #menu li {height:25px;text-align:center;line-height:25px;background:#e8e8e8;border-bottom:solid 1px 
+                   #bfbfbf;}
+        #menu li.hover {background:#66cccc;}
+        #menu li.highlight {background:#ffff66;}
+        #menu li.highlight2 {background:#006666;}
+    </style>
+    <script src="Js/jquery-1.7.1.js"></script>
+    <script>
+        $(function show() {
+            $("h1").click(function () {
+                $("ul").removeClass("show");
+                $(this).next().addClass("show");
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="menu">
+		<div>
+			<h1>视觉设计</h1>
+			<ul>
+				<li>PhotoShop</li>
+				<li>InDesign</li>
+				<li>Illustrator</li>
+				<li>flash</li>
+			</ul>
+		</div>
+		<div>
+			<h1>Web前端开发</h1>
+			<ul>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>JavaScript</li>
+			</ul>
+		</div>
+		<div>
+			<h1>PHP开发</h1>
+			<ul>
+				<li>Apache</li>
+				<li>PHP</li>
+				<li>MySQL</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

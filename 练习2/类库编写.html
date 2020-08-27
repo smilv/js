@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+       var _ = function (data) {
+
+            return new _.prototype.init(data);
+
+        }
+        
+        _.prototype.init = function (data) {
+            this._data = data;
+            //alert(data)
+            return this;
+        }
+
+        _.prototype.count = function () {
+
+            var Arr = this._data;
+            var newArr = [];
+            for(var i=0;i<this._data.length;i++){
+                newArr.push(Arr[i]*2)
+            }
+            return newArr;
+        }
+
+        _.prototype.each = function () {
+            
+            
+        }
+
+        _.prototype.init.prototype = _.prototype;
+
+
+        //测试
+
+        //console.log(_([2,4,3,5]).count());
+
+        _([1, 2, 3, 2, 1]).each(function(){
+
+        })
+
+        //替换windows
+        console.log("aWindows=‘ _Windowsd (Windows. )’".replace(/\bWindows(?!\w)/g, "item"));
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

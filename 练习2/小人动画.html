@@ -1,0 +1,122 @@
+﻿ <!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+  (function (window) {
+      var Player = function (x,y, ctx) {
+        
+          this.ctx = ctx;
+
+          this.dir = 1;
+          this.preDir = 1;
+
+          this._walkItv = null;
+          this.walking = false;
+
+          this.speed = 50;
+          this.x = x;
+          this.y = y;
+      }
+
+      var p = Player.prototype;
+    
+      p.move = function () {
+
+          if (this.dir === 1) this.y -= this.speed * 15 / 1000;
+          if (this.dir === 2) this.x -= this.speed * 15 / 1000;
+          if (this.dir === 3) this.y += this.speed * 15 / 1000;
+          if (this.dir === 4) this.x += this.speed * 15 / 1000;
+    
+      }
+
+      p.tick = function () {
+          if ((!this.walking) ||(this.walking&&this.dir!==this.preDir) ) {
+              this.walk();
+              this.preDir = this.dir;
+          }
+          this.move();
+      }
+
+      p.stand = function () {
+          clearInterval(this._walkItv);
+          this.speed = 0;
+          
+      }
+
+      p.walk = function () {
+
+          clearInterval(this._walkItv);
+
+          var i = 0;
+          this.walking = true;
+          var self = this;
+
+          var j = this.dir - 1;
+
+          this._walkItv = setInterval(function () {
+              self.ctx.clearRect(0, 0, canvas.width, canvas.height)
+              //改变绘制的区域
+              self.ctx.drawImage(img, i * 64, j * 64, 64, 64, self.x, self.y, 64, 64);
+              i++;
+              if (i > 7) i = 0;
+
+          }, 100);
+
+      }
+
+      window.Player = Player;
+  }(window))
+
+
+    </script>
+</head>
+<body>
+    <center>
+    <canvas width="600" height="500" id="ourCanvas" style="background-image:url(images/mu.jpg);"></canvas>
+    </center>
+  <script>
+      var canvas = document.getElementById("ourCanvas");
+      var ctx = canvas.getContext("2d");
+      
+      var img = new Image();
+      img.src = "images/hero-m.png";
+      var player;
+      img.onload = function () {
+
+          player = new Player(250,250,ctx);
+
+          setInterval(function () {
+              player.tick();
+          }, 15);
+
+      }
+
+
+      document.onkeydown = function (e) {
+
+          if (e.keyCode === 38) {
+              player.speed = 50;
+              player.dir = 1;
+          }
+          if (e.keyCode === 37) {
+              player.speed = 50;
+              player.dir = 2;
+          }
+          if (e.keyCode === 40) {
+              player.dir = 3;
+              player.speed = 50;
+          }
+          if (e.keyCode === 39)
+          {
+              player.speed = 50;
+              player.dir = 4;
+          }
+      }
+
+      
+  </script>
+</body>
+</html>

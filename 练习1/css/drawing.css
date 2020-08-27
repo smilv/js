@@ -1,0 +1,332 @@
+﻿body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, select, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(../images/subtle-wood.gif);
+}
+
+.drawingBox {
+    width: 700px;
+    height: 438px;
+    margin: 50px auto;
+    background: url(../images/drawingBox.jpg);
+    border-radius: 30px;
+}
+
+.pattern {
+    width: 660px;
+    height: 35px;
+    border-radius: 30px;
+    padding: 20px 20px;
+}
+
+.mycanvas {
+    border-radius: 30px;
+}
+
+.board {
+    width: 690px;
+    background-color: #fff;
+    margin: 4px auto;
+    border-radius: 30px;
+}
+
+.color {
+    width: 240px;
+    border: solid 2px #ff7500;
+    border-radius: 10px;
+    padding: 5px 5px;
+    float: left;
+    margin-left: 10px;
+    background-color: #fff;
+}
+
+    .color:active {
+        border-color: #2fe514;
+    }
+
+.red {
+    width: 20px;
+    height: 20px;
+    background-color: #ff0000;
+    border: solid #000000 1px;
+    float: left;
+    cursor: pointer;
+}
+
+    .red:hover {
+        border-color: #fff;
+    }
+
+
+.green {
+    width: 20px;
+    height: 20px;
+    background-color: #21e50a;
+    border: solid #000000 1px;
+    margin-left: 5px;
+    float: left;
+    cursor: pointer;
+}
+
+    .green:hover {
+        border-color: #fff;
+    }
+
+
+.black {
+    width: 20px;
+    height: 20px;
+    background-color: #000000;
+    border: solid #000000 1px;
+    margin-left: 5px;
+    float: left;
+    cursor: pointer;
+}
+
+    .black:hover {
+        border-color: #fff;
+    }
+
+
+.white {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: solid #000000 1px;
+    margin-left: 5px;
+    float: left;
+    cursor: pointer;
+}
+
+    .white:hover {
+        border-color: #fff;
+    }
+
+.yellow {
+    width: 20px;
+    height: 20px;
+    background-color: #f5ff00;
+    border: solid #000000 1px;
+    margin-left: 5px;
+    float: left;
+    cursor: pointer;
+}
+
+    .yellow:hover {
+        border-color: #fff;
+    }
+
+.purple {
+    width: 20px;
+    height: 20px;
+    background-color: #21108d;
+    border: solid #000000 1px;
+    margin-left: 5px;
+    float: left;
+    cursor: pointer;
+}
+
+    .purple:hover {
+        border-color: #fff;
+    }
+
+.blue {
+    width: 20px;
+    height: 20px;
+    background-color: #005fd3;
+    border: solid #000000 1px;
+    margin-left: 5px;
+    float: left;
+    cursor: pointer;
+}
+
+    .blue:hover {
+        border-color: #fff;
+    }
+
+.orange {
+    width: 20px;
+    height: 20px;
+    background-color: #fa9f10;
+    border: solid #000000 1px;
+    margin-left: 5px;
+    float: left;
+    cursor: pointer;
+}
+
+    .orange:hover {
+        border-color: #fff;
+    }
+
+.qing {
+    width: 20px;
+    height: 20px;
+    background-color: #03fff0;
+    border: solid #000000 1px;
+    margin-left: 5px;
+    float: left;
+    cursor: pointer;
+}
+
+    .qing:hover {
+        border-color: #fff;
+    }
+
+.current {
+    width: 36px;
+    height: 36px;
+    float: left;
+    margin-left: 20px;
+}
+
+.wideOrThin {
+    width: 84px;
+    height: 30px;
+    border: solid 2px #ff7500;
+    padding: 2px 2px;
+    float: left;
+    margin-left: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+    .wideOrThin:active {
+        border-color: #2fe514;
+    }
+
+.thin {
+    width: 2px;
+    height: 28px;
+    background: url(../images/wideOrThin.png) 0 0;
+    margin-left: 6px;
+    cursor: pointer;
+    float: left;
+    border: solid 1px #fff;
+}
+
+    .thin:active {
+        border: solid 2px #2fe514;
+    }
+
+.middle {
+    width: 4px;
+    height: 28px;
+    background: url(../images/wideOrThin.png) -18px 0;
+    margin-left: 8px;
+    cursor: pointer;
+    float: left;
+    border: solid 1px #fff;
+}
+
+    .middle:active {
+        border: solid 2px #2fe514;
+    }
+
+.wide {
+    width: 6px;
+    height: 28px;
+    background: url(../images/wideOrThin.png) -37px 0;
+    margin-left: 8px;
+    cursor: pointer;
+    float: left;
+    border: solid 1px #fff;
+}
+
+    .wide:active {
+        border: solid 2px #2fe514;
+    }
+
+.middleWide {
+    width: 8px;
+    height: 28px;
+    background: url(../images/wideOrThin.png) -59px 0;
+    margin-left: 8px;
+    cursor: pointer;
+    float: left;
+    border: solid 1px #fff;
+}
+
+    .middleWide:active {
+        border: solid 2px #2fe514;
+    }
+
+.bigWide {
+    width: 10px;
+    height: 28px;
+    background: url(../images/wideOrThin.png) -87px 0;
+    margin-left: 8px;
+    cursor: pointer;
+    float: left;
+    border: solid 1px #fff;
+}
+
+    .bigWide:active {
+        border: solid 2px #2fe514;
+    }
+
+.pencil {
+    width: 30px;
+    height: 30px;
+    border: solid 2px #ff7500;
+    float: left;
+    margin-left: 20px;
+    margin-top: 2px;
+    background: url(../images/pencil.jpg);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+    .pencil:active {
+        border-color: #2fe514;
+    }
+
+.clear {
+    width: 30px;
+    height: 30px;
+    border: solid 2px #ff7500;
+    float: left;
+    margin-left: 20px;
+    margin-top: 2px;
+    background: url(../images/clear.jpg);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+    .clear:active {
+        border-color: #2fe514;
+    }
+
+.cancel {
+    width: 30px;
+    height: 30px;
+    border: solid 2px #ff7500;
+    float: left;
+    margin-left: 20px;
+    margin-top: 2px;
+    background: url(../images/cancel.jpg);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+    .cancel:active {
+        border-color: #2fe514;
+    }
+
+.eraser {
+    width: 30px;
+    height: 30px;
+    border: solid 2px #ff7500;
+    float: left;
+    margin-left: 20px;
+    margin-top: 2px;
+    background: url(../images/eraser.jpg);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+    .eraser:active {
+        border-color: #2fe514;
+    }

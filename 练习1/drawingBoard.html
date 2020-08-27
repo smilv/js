@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="css/drawing.css" rel="stylesheet" />
+    <link href="css/layout.css" rel="stylesheet" />
+    <link href="css/colorpicker.css" rel="stylesheet" />
+    <script src="js/jquery-1.7.1.js"></script>
+    <script src="js/colorpicker.js"></script>
+    <script src="js/drawingBoard.js"></script>
+</head>
+<body>
+    <div class="drawingBox">
+        <div class="pattern">
+            <div class="color">
+                <div class="red"></div>
+                <div class="green"></div>
+                <div class="black"></div>
+                <div class="white"></div>
+                <div class="yellow"></div>
+                <div class="purple"></div>
+                <div class="blue"></div>
+                <div class="orange"></div>
+                <div class="qing"></div>
+                <p style="height:0;font-size:0;clear:both;"></p>
+            </div>
+
+            <div class="current">
+                <div id="customWidget">
+                    <div id="colorSelector2">
+                        <div style="background-color: rgb(27, 97, 41); width: 30px; height: 30px"></div>
+                    </div>
+                    <div id="colorpickerHolder2" style="height: 0px; display: block;"></div>
+                </div>
+            </div>
+
+            <div class="wideOrThin">
+                <div class="thin" value="2"></div>
+                <div class="middle" value="4"></div>
+                <div class="wide" value="8"></div>
+                <div class="middleWide" value="10"></div>
+                <div class="bigWide" value="12"></div>
+                <p style="height:0;font-size:0;clear:both;"></p>
+            </div>
+
+            <div>
+                <div class="current_wideOrThin"></div>
+            </div>
+            
+            <div class="pencil"></div>
+
+            <div class="eraser"></div>
+
+            <div class="cancel"></div>
+
+            <div class="clear"></div>
+
+        </div>
+
+        <div class="board">
+            <canvas width="690" height="320" class="mycanvas"></canvas>
+        </div>
+    </div>
+</body>
+</html>

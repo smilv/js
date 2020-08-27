@@ -1,0 +1,118 @@
+<!doctype html>  
+<html>  
+    <head>  
+        <meta charset="utf-8">  
+        <title>滚动视觉差示例</title>  
+        <style>  
+            *{  
+                padding:0;  
+                margin:0  
+            }  
+            .bg{
+            	background-attachment:fixed; 
+            	background-size:cover;
+            	background-position:center center;
+            	height:1000px;
+            	position:relative;
+            }
+            .sprite,.screen{
+            	height:1000px;
+            	width:100%;
+            	position:absolute;
+            }
+            .bg_1{
+            	background-image:url('about_bg.jpg');  
+            }
+             .bg_2{
+            	background-image:url('home_bg.jpg');  
+            }
+             .bg_3{
+            	background-image:url('design_bg.jpg');  
+            }
+             .bg_4{
+            	background-image:url('lab_bg.jpg');  
+            }
+            .bg_1 .sprite{
+            	background: url('about_sprite_frei.png') center 143px no-repeat fixed;
+            }
+            .bg_1 .screen{
+            	background: url(about_frei.png) center 143px no-repeat;
+            }
+            .bg_2 .sprite{
+            	background: url('home_sprite_frei.png') center 143px no-repeat fixed;
+            }
+            .bg_2 .screen{
+            	background: url(home_frei.png) center 143px no-repeat;
+            }
+            .bg_3 .sprite{
+            	background: url('design_sprite_frei.png') center 143px no-repeat fixed;
+            }
+            .bg_3 .screen{
+            	background: url(design_frei.png) center 143px no-repeat;
+            }
+            .bg_4 .sprite{
+            	background: url('lab_sprite_frei.png') center 143px no-repeat fixed;
+            }
+            .bg_4 .screen{
+            	background: url(lab_frei.png) center 143px no-repeat;
+            }
+           
+            
+            .screen .content{
+            	width: 280px;
+    			margin-left: 20%;
+    			margin-top: 10%;
+    			color:white;
+    			
+            }
+            h1{
+            	font-family: "DINProBold", Arial, sans-serif;
+    			font-weight: normal;
+    			font-style: normal;
+    			font-size: 57px;
+    			line-height: 43px;
+    			padding: 0 0 10px 0;
+            }
+            h2{
+            	font-family: Times, "Times New Roman", serif;
+			    font-weight: normal;
+			    font-style: italic;
+			    font-size: 24px;
+			    padding: 6px 0 18px 0;
+			    line-height: 24px;
+            }
+            .screen .content p {
+			    width: 275px;
+			    font-size: 13px;
+			    font-family: "DINProRegular";
+			    color:#6f6e6e;
+			}
+        </style>  
+    </head>  
+    <body>  
+        <div id="main">  
+            <div class="bg bg_1">
+            	<div class="sprite"></div>
+            	<div class="screen">
+            		<div class="content">
+            			<h1>Plate H<br>IRSCHE</h1>
+            			<h2>_beyond design</h2>
+            			<p class="bodytext">Liebevoll, begeistert, verantwortlich, <br>innovativ. Die Lösung der Aufgabe <br>vor Augen. Ohne Schubladen. Mit <br>Leidenschaft. Mit dieser Haltung <br>arbeiten wir. Inzwischen fast <br>10 Jahre im Herzen von Hamburg. <br><br>OK Studios stehen für neue Gestaltung, <br>für „handgemachte“ Technologie und <br>Und für seinen Erfolg. <br><br>_beyond design.</p>
+            		</div>
+            	</div>
+            </div> 
+            <div class="bg bg_2">
+            	<div class="sprite"></div>
+            	<div class="screen"></div>
+            </div> 
+            <div class="bg bg_3">
+            	<div class="sprite"></div>
+            	<div class="screen"></div>
+            </div> 
+            <div class="bg bg_4">
+            	<div class="sprite"></div>
+            	<div class="screen"></div>
+            </div> 
+        </div>  
+    </body>  
+</html>  

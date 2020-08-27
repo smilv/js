@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        body,ul,li{ margin:0; padding:0; font-size:13px;}
+        ul,li{list-style:none;}
+        #divselect{width:186px; margin:80px auto; position:relative; z-index:10000;}
+        #divselect cite{width:150px; height:24px;line-height:24px; display:block; color:#807a62; cursor:pointer;font-style:normal;
+            padding-left:4px; padding-right:30px; border:1px solid #333333; 
+            background:url(images/xjt.png) no-repeat right center;}
+        #divselect ul{width:184px;border:1px solid #333333; background-color:#ffffff; position:absolute; z-index:20000; margin-top:-1px; display:none;}
+        #divselect ul li{height:24px; line-height:24px;}
+        #divselect ul li a{display:block; height:24px; color:#333333; text-decoration:none; padding-left:10px; padding-right:10px;}
+        #divselect ul li a:hover{background-color:#CCC;}
+    </style>
+    <script src="Js/jquery-1.7.1.js"></script>
+</head>
+<body>
+    <form action="" method="post">
+    <div id="divselect">
+      <cite>请选择分类</cite>
+      <ul>
+         <li><a href="javascript:;" selectid="1">ASP开发</a></li>
+         <li><a href="javascript:;" selectid="2">.NET开发</a></li>
+         <li><a href="javascript:;" selectid="3">PHP开发</a></li>
+         <li><a href="javascript:;" selectid="4">Javascript开发</a></li>
+         <li><a href="javascript:;" selectid="5">Java特效</a></li>
+      </ul>
+  </div>
+  <input name="" type="hidden" value="" id="inputselect"/>
+
+</form>
+
+<script>
+    $("#divselect cite").click(function (e)
+    {
+        if ($("#divselect ul").css("display") == "none")
+        {
+            $("#divselect ul").slideDown();
+        }
+        else
+        {
+            $("#divselect ul").slideUp();
+        }
+        e.stopPropagation();  //阻止冒泡
+        //return false;  //阻止冒泡
+    })
+    $("#divselect li").each(function ()
+    {
+        $(this).click(function ()
+        {
+            $("#divselect cite").html($(this).text());
+        })
+    })
+    $(document).click(function ()
+    {
+        $("#divselect ul").hide();
+    })
+</script>
+</body>
+</html>

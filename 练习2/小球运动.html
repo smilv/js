@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+</body>
+
+    <div style="text-align:center">
+        <canvas id="gameCanvas" width="500" height="500" style="border-style:solid;border-width:thick">
+            请使用现代浏览器，您的浏览器不支持canvas.远离ie5678啊亲
+        </canvas>
+    </div>
+
+    <script>
+        var Ball = function (speedX, speedY, x, y, r) {
+            this.speedX = speedX;
+            this.speedY = speedY;
+            this.x = x;
+            this.y = y;
+            this.r = r;
+        }
+
+        Ball.prototype.show = function (ctx) {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2, false);
+            ctx.fill();
+        }
+        
+        var canvas = document.getElementById("gameCanvas");
+        var ctx = canvas.getContext("2d");
+
+        var ball = new Ball(2, 4, 100, 100, 10);
+
+        //var x = 100;
+        setInterval(function () {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            ball.x += ball.speedX;
+            ball.y += ball.speedY;
+            if (ball.y + ball.r > canvas.height) {
+                ball.speedY *= -1;
+            }
+            if (ball.x + ball.r > canvas.width) {
+                ball.speedX *= -1;
+            }
+            if (ball.y < ball.r) {
+                ball.speedY *= -1;
+            }
+            if (ball.x < ball.r) {
+                ball.speedX *= -1;
+            }
+
+
+            ball.show(ctx);
+        }, 15);
+
+    </script>
+
+</html>

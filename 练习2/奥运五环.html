@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <canvas id="myCanvas"  width="320" height="200" style="border-style:dashed;border-width:thin"></canvas>
+
+    <script>
+        
+        var canvas = document.getElementById("myCanvas");  //建一个画布
+        var ctx = canvas.getContext("2d");
+
+        ctx.lineWidth = 5;
+
+        ctx.strokeStyle = "#163B62";
+        ctx.beginPath();
+        ctx.arc(70, 70, 40, 0, Math.PI * 2, false); 
+        ctx.stroke();
+
+        ctx.strokeStyle = "#000000";
+        ctx.beginPath();
+        ctx.arc(160, 70, 40, 0, Math.PI * 2, false);
+        ctx.stroke();
+
+        ctx.strokeStyle = "#BF0628";
+        ctx.beginPath();
+        ctx.arc(250, 70, 40, 0, Math.PI * 2, false);
+        ctx.stroke();
+
+        ctx.strokeStyle = "#EBC41F";
+        ctx.beginPath();
+        ctx.arc(110, 110, 40, 0, Math.PI * 2, false);
+        ctx.stroke();
+
+        ctx.strokeStyle = "#198E4A";
+        ctx.beginPath();
+        ctx.arc(205, 110, 40, 0, Math.PI * 2, false);
+        ctx.stroke();        
+
+        //覆盖
+
+        ctx.strokeStyle = "#163B62";
+        ctx.beginPath();
+        ctx.arc(70, 70, 40, Math.PI*1.8, Math.PI*0.2 , false);
+        ctx.stroke();
+
+        ctx.strokeStyle = "#000000";
+        ctx.beginPath();
+        ctx.arc(160, 70, 40, Math.PI *1.8, Math.PI *0.8, false);
+        ctx.stroke();
+        
+        ctx.strokeStyle = "#BF0628";
+        ctx.beginPath();
+        ctx.arc(250, 70, 40, Math.PI*0.8, Math.PI * 0.5, true);
+        ctx.stroke();
+
+        ctx.strokeStyle = "#198E4A";
+        ctx.beginPath();
+        ctx.arc(205, 110, 40, Math.PI*0.8, Math.PI *1.2, false);
+        ctx.stroke();
+    </script>
+</body>
+</html>

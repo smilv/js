@@ -1,0 +1,540 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-weight:bold;
+}
+
+.box {
+    width: 198px;
+    height: 247px;
+    margin: 100px auto;
+    background: url(../images/calculator_background.bmp) repeat-x;
+    padding: 5px 0 0 7px;
+    border: solid #ff6a00 2px;
+}
+
+.value {
+    width: 190px;
+    height: 50px;
+    background: url(../images/calculator.bmp) no-repeat -7px -5px;
+}
+
+#import_value {
+    width: 186px;
+    height: 16px;
+    font-size: 16px;
+    color: #000;
+    padding-top: 4px;
+    padding-right: 4px;
+    text-align: right;
+    overflow:hidden;
+}
+
+#export_value {
+    width: 186px;
+    height: 22px;
+    font-size: 22px;
+    color: #000;
+    padding-top: 4px;
+    padding-right: 4px;
+    text-align: right;
+    overflow:hidden;
+}
+
+.MC {
+    width: 34px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -7px -60px;
+    margin-top: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+    .MC:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -7px -60px;
+    }
+
+    .MC:active {
+        background: url(../images/calculator_click.jpg) no-repeat -7px -60px;
+    }
+
+.MR {
+    width: 34px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -46px -60px;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+    .MR:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -46px -60px;
+    }
+
+    .MR:active {
+        background: url(../images/calculator_click.jpg) no-repeat -46px -60px;
+    }
+
+.MS {
+    width: 34px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -85px -60px;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+    .MS:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -85px -60px;
+    }
+
+    .MS:active {
+        background: url(../images/calculator_click.jpg) no-repeat -85px -60px;
+    }
+
+.Madd {
+    width: 34px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -124px -60px;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+    .Madd:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -124px -60px;
+    }
+
+    .Madd:active {
+        background: url(../images/calculator_click.jpg) no-repeat -124px -60px;
+    }
+
+.Msubtract {
+    width: 34px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -163px -60px;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+    .Msubtract:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -163px -60px;
+    }
+
+    .Msubtract:active {
+        background: url(../images/calculator_click.jpg) no-repeat -163px -60px;
+    }
+
+.clearThis {
+    width: 34px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -7px -92px;
+    margin-top: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+    .clearThis:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -7px -92px;
+    }
+
+    .clearThis:active {
+        background: url(../images/calculator_click.jpg) no-repeat -7px -92px;
+    }
+
+.CE {
+    width: 34px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -46px -92px;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+    .CE:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -46px -92px;
+    }
+
+    .CE:active {
+        background: url(../images/calculator_click.jpg) no-repeat -46px -92px;
+    }
+
+.C {
+    width: 34px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -85px -92px;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+    .C:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -85px -92px;
+    }
+
+    .C:active {
+        background: url(../images/calculator_click.jpg) no-repeat -85px -92px;
+    }
+
+.positive_negative_Nunber {
+    width: 34px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -124px -92px;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+    .positive_negative_Nunber:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -124px -92px;
+    }
+
+    .positive_negative_Nunber:active {
+        background: url(../images/calculator_click.jpg) no-repeat -124px -92px;
+    }
+
+.radical {
+    width: 34px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -163px -92px;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+    .radical:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -163px -92px;
+    }
+
+    .radical:active {
+        background: url(../images/calculator_click.jpg) no-repeat -163px -92px;
+    }
+
+.seven {
+    width: 34px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -7px -124px;
+    margin-top: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+    .seven:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -7px -124px;
+    }
+
+    .seven:active {
+        background: url(../images/calculator_click.jpg) no-repeat -7px -124px;
+    }
+
+.eight {
+    width: 34px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -46px -124px;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+    .eight:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -46px -124px;
+    }
+
+    .eight:active {
+        background: url(../images/calculator_click.jpg) no-repeat -46px -124px;
+    }
+
+.nine {
+    width: 34px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -85px -124px;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+    .nine:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -85px -124px;
+    }
+
+    .nine:active {
+        background: url(../images/calculator_click.jpg) no-repeat -85px -124px;
+    }
+
+.division {
+    width: 34px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -124px -124px;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+    .division:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -124px -124px;
+    }
+
+    .division:active {
+        background: url(../images/calculator_click.jpg) no-repeat -124px -124px;
+    }
+
+.percentage {
+    width: 34px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -163px -124px;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+    .percentage:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -163px -124px;
+    }
+
+    .percentage:active {
+        background: url(../images/calculator_click.jpg) no-repeat -163px -124px;
+    }
+
+.four {
+    width: 34px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -7px -156px;
+    margin-top: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+    .four:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -7px -156px;
+    }
+
+    .four:active {
+        background: url(../images/calculator_click.jpg) no-repeat -7px -156px;
+    }
+
+.five {
+    width: 34px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -46px -156px;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+    .five:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -46px -156px;
+    }
+
+    .five:active {
+        background: url(../images/calculator_click.jpg) no-repeat -46px -156px;
+    }
+
+.six {
+    width: 34px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -85px -156px;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+    .six:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -85px -156px;
+    }
+
+    .six:active {
+        background: url(../images/calculator_click.jpg) no-repeat -85px -156px;
+    }
+
+.multiplication {
+    width: 34px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -124px -156px;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+    .multiplication:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -124px -156px;
+    }
+
+    .multiplication:active {
+        background: url(../images/calculator_click.jpg) no-repeat -124px -156px;
+    }
+
+.divisionX {
+    width: 34px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -163px -156px;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+    .divisionX:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -163px -156px;
+    }
+
+    .divisionX:active {
+        background: url(../images/calculator_click.jpg) no-repeat -163px -156px;
+    }
+
+.one {
+    width: 34px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -7px -188px;
+    margin-top: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+    .one:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -7px -188px;
+    }
+
+    .one:active {
+        background: url(../images/calculator_click.jpg) no-repeat -7px -188px;
+    }
+
+.two {
+    width: 34px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -46px -188px;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+    .two:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -46px -188px;
+    }
+
+    .two:active {
+        background: url(../images/calculator_click.jpg) no-repeat -46px -188px;
+    }
+
+.three {
+    width: 34px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -85px -188px;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+    .three:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -85px -188px;
+    }
+
+    .three:active {
+        background: url(../images/calculator_click.jpg) no-repeat -85px -188px;
+    }
+
+.subduction {
+    width: 34px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -124px -188px;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+    .subduction:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -124px -188px;
+    }
+
+    .subduction:active {
+        background: url(../images/calculator_click.jpg) no-repeat -124px -188px;
+    }
+
+.equal {
+    width: 34px;
+    height: 59px;
+    background: url(../images/calculator.bmp) no-repeat -163px -188px;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+    .equal:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -163px -188px;
+    }
+
+    .equal:active {
+        background: url(../images/calculator_click.jpg) no-repeat -163px -188px;
+    }
+
+.zero {
+    width: 73px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -7px -220px;
+    margin-top: -27px;
+    cursor: pointer;
+    float: left;
+}
+
+    .zero:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -7px -220px;
+    }
+
+    .zero:active {
+        background: url(../images/calculator_click.jpg) no-repeat -7px -220px;
+    }
+
+.radix_point {
+    width: 34px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -85px -220px;
+    margin-top: -27px;
+    margin-left: 78px;
+    cursor: pointer;
+    float: left;
+}
+
+    .radix_point:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -85px -220px;
+    }
+
+    .radix_point:active {
+        background: url(../images/calculator_click.jpg) no-repeat -85px -220px;
+    }
+
+.add {
+    width: 34px;
+    height: 27px;
+    background: url(../images/calculator.bmp) no-repeat -124px -220px;
+    margin-top: -27px;
+    margin-left: 117px;
+    cursor: pointer;
+    float: left;
+}
+
+    .add:hover {
+        background: url(../images/calculator_hover.jpg) no-repeat -124px -220px;
+    }
+
+    .add:active {
+        background: url(../images/calculator_click.jpg) no-repeat -124px -220px;
+    }

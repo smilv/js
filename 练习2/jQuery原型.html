@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+            // $(".xxxxx").show()
+
+            var $ = function (s) {
+                return new $.prototype.init(s);
+            }
+
+            $.prototype.init = function (s) {
+                 // alert(s)
+                return this;
+            }
+
+            $.prototype.length = 6;
+
+            $.prototype.size = function () {
+
+                return this.length;
+            }
+            $.prototype.version = "1.9.1";
+            $.prototype.show = function () {
+                console.log(this.version)
+            }
+
+            $.prototype.init.prototype = $.prototype;
+            //隔离作用域
+            //John Resig
+            alert($("#ourCanvas").size());
+
+            $("div").length = 5;
+
+            $("div").show();
+    </script>
+</body>
+</html>
