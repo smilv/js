@@ -1,0 +1,90 @@
+.mask-pkg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.red-pkg-notopen {
+    width: 318px;
+    height: 441px;
+    background-size: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: 0.6s;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate3d(-50%, -20%, 0) scale(0.2);
+}
+.red-pkg-notopen-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(-50%, -50%, 0) scale(1);
+}
+.red-pkg-notopen .close {
+    display: block;
+    width: 29px;
+    height: 29px;
+    position: absolute;
+    top: 5px;
+    right: -15px;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.6s;
+    transition-delay: 0.4s;
+}
+.red-pkg-notopen-show .close {
+    opacity: 1;
+}
+.red-pkg-notopen .top {
+    display: block;
+    width: 270px;
+    height: 94px;
+    position: relative;
+    margin: 0 auto;
+    top: 17px;
+    transform: scale(0.7);
+}
+.red-pkg-notopen-show .top {
+    animation: red-pkg-notopen-top 0.4s ease-in 0.2s forwards;
+}
+@keyframes red-pkg-notopen-top {
+    0% {
+        transform: scale(0.7);
+        top: 17px;
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+        top: -4px;
+    }
+    75% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+        top: 0;
+    }
+}
+.red-pkg-notopen .bg {
+    width: 318px;
+    height: 393px;
+    background: url("./img/hb_bj_tc@2x.png") no-repeat;
+    background-size: 100%;
+    position: relative;
+    top: -46px;
+}
+.red-pkg-notopen .count-down {
+    display: block;
+    width: 109px;
+    height: 109px;
+    position: absolute;
+    left: 50%;
+    bottom: 49px;
+    transform: translate(-50%, 0);
+}
