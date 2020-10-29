@@ -7,6 +7,18 @@
     background: rgba(0, 0, 0, 0.5);
     display: none;
 }
+.red-pkg-close {
+    display: block;
+    width: 29px;
+    height: 29px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: 147px;
+    margin-top: -220px;
+    cursor: pointer;
+    opacity: 0;
+}
 /* 未开启 */
 .red-pkg-notopen {
     width: 318px;
@@ -24,21 +36,6 @@
     opacity: 1;
     visibility: visible;
     transform: translate3d(-50%, -50%, 0) scale(1);
-}
-.red-pkg-notopen .close {
-    display: block;
-    width: 29px;
-    height: 29px;
-    position: absolute;
-    top: 5px;
-    right: -15px;
-    cursor: pointer;
-    opacity: 0;
-    transition: 0.6s;
-    transition-delay: 0.4s;
-}
-.red-pkg-notopen-show .close {
-    opacity: 1;
 }
 .red-pkg-notopen .top {
     display: block;
@@ -141,4 +138,60 @@
     background: url("./img/hb_bj_jg@2x.png") no-repeat;
     background-size: 100%;
     position: absolute;
+}
+.red-pkg-open .success {
+    /* display: none; */
+    padding-top: 25px;
+    text-align: center;
+}
+.red-pkg-open .success .title {
+    font-size: 18px;
+    color: #bc7300;
+}
+.red-pkg-open .success .sum {
+    color: #fc4b00;
+    font-size: 20px;
+    margin-top: 18px;
+    line-height: 46px;
+}
+.red-pkg-open .success .sum i {
+    font-size: 46px;
+    font-weight: 600;
+    font-family: PingFangSC, PingFangSC-Semibold;
+}
+.red-pkg-open .success .tips {
+    font-size: 16px;
+    color: #bd7503;
+    margin-top: 7px;
+}
+.red-pkg-open .success .tips i {
+    color: #fc4b00;
+    text-decoration: underline;
+}
+.red-pkg-open .fail {
+    display: none;
+    font-size: 20px;
+    color: #fc4b00;
+    text-align: center;
+    padding-top: 72px;
+    font-weight: 500;
+}
+.red-pkg-open .operation {
+    position: absolute;
+    bottom: 23px;
+    left: 0;
+    right: 0;
+}
+.red-pkg-open .operation img {
+    display: block;
+    cursor: pointer;
+    margin: 0 auto;
+}
+.red-pkg-open .operation .reply {
+    width: 254px;
+    height: 50px;
+}
+.red-pkg-open .operation .check {
+    width: 244px;
+    height: 42px;
 }
