@@ -7,6 +7,7 @@
     background: rgba(0, 0, 0, 0.5);
     display: none;
 }
+/* 未开启 */
 .red-pkg-notopen {
     width: 318px;
     height: 441px;
@@ -77,6 +78,7 @@
     background-size: 100%;
     position: relative;
     top: -46px;
+    padding-top: 52px;
 }
 .red-pkg-notopen .count-down {
     display: block;
@@ -86,4 +88,57 @@
     left: 50%;
     bottom: 49px;
     transform: translate(-50%, 0);
+}
+.red-pkg-notopen .open {
+    display: none;
+    width: 109px;
+    height: 109px;
+    position: absolute;
+    left: 50%;
+    bottom: 49px;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+}
+.red-pkg-notopen .avatar {
+    display: block;
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
+}
+.red-pkg-notopen .title {
+    font-size: 16px;
+    text-align: center;
+    color: #fff2c8;
+    padding-top: 10px;
+}
+/* 开启 */
+.red-pkg-open {
+    width: 317px;
+    height: 357px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: 0.4s;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate3d(-50%, -20%, 0) scale(0.2);
+}
+.red-pkg-open-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(-50%, -50%, 0) scale(1);
+}
+.red-pkg-open .top {
+    display: block;
+    width: 317px;
+    height: 151px;
+    position: absolute;
+    top: -103px;
+}
+.red-pkg-open .bg {
+    width: 317px;
+    height: 357px;
+    background: url("./img/hb_bj_jg@2x.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
 }
