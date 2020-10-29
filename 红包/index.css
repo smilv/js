@@ -47,9 +47,9 @@
     transform: scale(0.7);
 }
 .red-pkg-notopen-show .top {
-    animation: red-pkg-notopen-top 0.4s ease-in 0.2s forwards;
+    animation: redPkgNotopenTop 0.4s ease-in 0.2s forwards;
 }
-@keyframes red-pkg-notopen-top {
+@keyframes redPkgNotopenTop {
     0% {
         transform: scale(0.7);
         top: 17px;
@@ -138,6 +138,7 @@
     background: url("./img/hb_bj_jg@2x.png") no-repeat;
     background-size: 100%;
     position: absolute;
+    z-index: 1;
 }
 .red-pkg-open .success {
     /* display: none; */
@@ -195,3 +196,39 @@
     width: 244px;
     height: 42px;
 }
+.red-pkg-open .reply-list {
+    position: absolute;
+    bottom: -58px;
+}
+.red-pkg-open .reply-list div {
+    width: 308px;
+    height: 49px;
+    background: linear-gradient(124deg, #f9572d 9%, #fe2815 73%);
+    border: 2px solid #f8be04;
+    border-radius: 8px;
+    font-size: 19px;
+    text-align: center;
+    color: #fff2c8;
+    line-height: 49px;
+    cursor: pointer;
+    opacity: 0;
+}
+.red-pkg-open .reply-list-show div:nth-child(1) {
+    /* animation: replyListShow 0.2s linear 0.2s forwards; */
+}
+.red-pkg-open .reply-list-show div:nth-child(2) {
+    /* animation: replyListShow 0.2s linear 0.4s forwards; */
+}
+.red-pkg-open .reply-list-show div:nth-child(3) {
+    /* animation: replyListShow 0.2s linear 0.6s forwards; */
+}
+/* @keyframes replyListShow {
+    from {
+        opacity: 0;
+        margin-bottom: 0px;
+    }
+    to {
+        opacity: 1;
+        margin-bottom: 18px;
+    }
+} */
