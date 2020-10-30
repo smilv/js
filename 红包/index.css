@@ -230,3 +230,62 @@
     opacity: 1;
     transform: translateY(48px);
 }
+/* 查看手气 */
+.red-pkg-luck {
+    width: 309px;
+    height: 446px;
+    background: url("./img/sq_bj@2x.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.red-pkg-luck .title {
+    text-align: center;
+    font-size: 19px;
+    color: #fff2c8;
+    padding-top: 32px;
+}
+.red-pkg-luck .title img {
+    display: block;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 30px;
+    cursor: pointer;
+}
+.red-pkg-luck .title .back {
+    left: 11px;
+}
+.red-pkg-luck .title .close {
+    right: 11px;
+}
+.red-pkg-luck .list {
+    padding: 0 19px 0 18px;
+    overflow: scroll;
+    height: 312px;
+    margin-top: 40px;
+}
+.red-pkg-luck .data {
+    padding: 8px 0;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 36px;
+}
+.red-pkg-luck .data .info {
+    display: flex;
+    color: #fff2c8;
+}
+.red-pkg-luck .data .info img {
+    display: block;
+    width: 36px;
+    height: 36ppx;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.red-pkg-luck .data .sum {
+    color: #fee36c;
+}
