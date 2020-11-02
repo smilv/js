@@ -168,6 +168,7 @@
 .red-pkg-open .success .tips i {
     color: #fc4b00;
     text-decoration: underline;
+    cursor: pointer;
 }
 .red-pkg-open .fail {
     display: none;
@@ -288,4 +289,25 @@
 }
 .red-pkg-luck .data .sum {
     color: #fee36c;
+}
+/* 引导下载 */
+.red-pkg-download {
+    display: none;
+    width: 523px;
+    height: 447px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: url("./img/tc@2x.png") no-repeat;
+    background-size: 100%;
+}
+.red-pkg-download .close {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 58px;
+    top: 20px;
+    cursor: pointer;
 }

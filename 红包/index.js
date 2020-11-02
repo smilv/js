@@ -3,7 +3,7 @@
  * @Autor: bin
  * @Date: 2020-10-26 10:25:54
  * @LastEditors: bin
- * @LastEditTime: 2020-10-30 16:45:33
+ * @LastEditTime: 2020-11-02 15:16:33
  */
 (function() {
     $("#main").load("./template.html", function() {
@@ -51,6 +51,20 @@
             $(".red-pkg-luck").hide();
             $(".red-pkg-open").show();
             $(".red-pkg-close").show();
+        });
+        //点击钱包展示引导下载
+        $(".red-pkg-open .tips i").click(function() {
+            $(".red-pkg-open").hide();
+            $(".red-pkg-download").show();
+        });
+        // 关闭引导下载
+        $(".red-pkg-download .close").click(function() {
+            $(".red-pkg-download").hide();
+            $(".red-pkg-open").show();
+        });
+        //红包关闭
+        $(".red-pkg-close").click(function() {
+            $(".red-pkg-close,.red-pkg-notopen,.red-pkg-open").hide();
         });
     });
 })();
