@@ -3,7 +3,7 @@
  * @Autor: bin
  * @Date: 2021-05-18 22:27:27
  * @LastEditors: bin
- * @LastEditTime: 2021-05-18 23:11:48
+ * @LastEditTime: 2021-05-20 14:50:21
 -->
 <!DOCTYPE html>
 <html>
@@ -14,7 +14,7 @@
     </head>
     <body>
         <script>
-            Function.prototype.myBind = function() {
+            /* Function.prototype.myBind = function() {
                 let fn = this,
                     context = [...arguments][0],
                     args = [...arguments].slice(1);
@@ -31,7 +31,28 @@
             const cat1 = eat.myBind(cat, "1个月");
             cat1("小鱼干");
             const cat2 = eat.bind(cat, "2个月");
-            cat2("鱼");
+            cat2("鱼"); */
+
+            function myNew(Fun) {
+                let obj = {};
+                obj.__proto__ = Fun.prototype;
+                Fun.apply(obj, [...arguments].slice(1));
+                return obj;
+            }
+
+            function Person(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            Person.prototype.run = function() {
+                console.log(this.name + "跑1千米");
+            };
+            const people = myNew(Person, "bin", 18);
+            const people2 = new Person("bin", 18);
+            console.log(people);
+            people.run();
+            console.log(people2);
+            people2.run();
         </script>
     </body>
 </html>
