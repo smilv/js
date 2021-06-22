@@ -98,9 +98,10 @@
 }
 .red-pkg-notopen .avatar {
     display: block;
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
     margin: 0 auto;
+    border-radius: 50%;
 }
 .red-pkg-notopen .title {
     font-size: 16px;
