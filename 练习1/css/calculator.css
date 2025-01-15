@@ -21,7 +21,7 @@
 
 #import_value {
     width: 186px;
-    height: 16px;
+    height: 18px;
     font-size: 16px;
     color: #000;
     padding-top: 4px;
@@ -32,10 +32,8 @@
 
 #export_value {
     width: 186px;
-    height: 22px;
     font-size: 22px;
     color: #000;
-    padding-top: 4px;
     padding-right: 4px;
     text-align: right;
     overflow:hidden;
